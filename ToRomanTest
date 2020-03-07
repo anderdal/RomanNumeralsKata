@@ -1,0 +1,198 @@
+using ArabicToRomanController;
+
+[TestClass]
+public class OutOfRangeTest
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 4000;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "insert value between 1 and 3999");
+}
+
+[TestClass]
+public class LessThan1Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 0;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsNull(result);
+}
+[TestClass]
+public class GreateThanOrEqualTo1000Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 1000;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "M");
+}
+[TestClass]
+public class GreateThanOrEqualTo900Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 900;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "CM");
+}
+[TestClass]
+public class GreateThanOrEqualTo500Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 500;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "D");
+}
+[TestClass]
+public class GreateThanOrEqualTo400Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 400;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "CD");
+}
+[TestClass]
+public class GreateThanOrEqualTo100Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 100;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "C");
+}
+[TestClass]
+public class GreateThanOrEqualTo90Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 90;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "XC");
+}
+[TestClass]
+public class GreateThanOrEqualTo50Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 50;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "L");
+}
+[TestClass]
+public class GreateThanOrEqualTo40Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 40;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "XL");
+}
+[TestClass]
+public class GreateThanOrEqualTo10Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 10;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "X");
+}
+[TestClass]
+public class GreateThanOrEqualTo9Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 9;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "IX");
+}
+[TestClass]
+public class GreateThanOrEqualTo5Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 5;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "V");
+}
+[TestClass]
+public class GreateThanOrEqualTo4Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 4;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "IV");
+}
+[TestClass]
+public class GreateThanOrEqualTo1Test
+{
+  //Arrange
+  ArabicToRomanController controller = new AracbicRoRomanController();
+  var number = 1;
+  
+  //Act
+  var result = controller.ToRoman(number);
+  
+  //Assert
+  Assert.IsTrue(result, "I");
+}
