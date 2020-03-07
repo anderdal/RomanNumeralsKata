@@ -1,0 +1,72 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Enter Roman Numeral");
+		string numeral = Convert.ToString(Console.ReadLine());
+		int result = ToArabic(numeral);
+		Console.WriteLine(result);
+	}
+
+	public static int ToArabic(string numeral)
+	{
+		numeral = numeral.ToUpper();
+		var result = 0;
+		foreach (var letter in numeral)
+		{
+			result += ConvertLetterToNumber(letter);
+		}
+
+		if (numeral.Contains("IV") || numeral.Contains("IX"))
+			result -= 2;
+		if (numeral.Contains("XL") || numeral.Contains("XC"))
+			result -= 20;
+		if (numeral.Contains("CD") || numeral.Contains("CM"))
+			result -= 200;
+		return result;
+	}
+
+	private static int ConvertLetterToNumber(char letter)
+	{
+		switch (letter)
+		{
+			case 'M':
+				return 1000;
+			case 'D':
+				return 500;
+			case 'C':
+				return 100;
+			case 'L':
+				return 50;
+			case 'X':
+				return 10;
+			case 'V':
+				return 5;
+			case 'I':
+				return 1;
+			default:
+				throw new AggregateException("Error");
+		}
+	}
+}
+/*Comments
+I = 1
+V = 5
+X = 10
+L = 50
+C = 100
+D = 500
+M = 1000
+
+Rules
+1. I,X,C,M can only be reapeated 3 times in a row
+2. V,L,D can NEVER be repeated
+3.I,X,C can ONLY be substracted from the 2 next highest values
+  a) I (IV, IX)
+  b) X (XL, XC)
+  c) C (CD, CM)
+4. ONLY 1 substraction can be made per numeraql (XC is allowed, XXC is not)
+5. V,L,D can never be substracted (5)
+*/
