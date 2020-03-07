@@ -43,6 +43,7 @@ public class Program
         return "IV" + ToRoman(number - 4);
       if (number >= 1) 
         return "I" + ToRoman(number - 1);
+      throw new ArgumentOutOfRangeException("Error");
   }
 }
 
