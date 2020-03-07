@@ -1,0 +1,132 @@
+using RomanToArabicController
+
+[TestClass]
+public void MTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "M";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 1000)
+}
+[TestClass]
+public void DTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "D";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 500)
+}
+[TestClass]
+public void CTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "C";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 100)
+}
+[TestClass]
+public void LTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "L";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 50)
+}
+[TestClass]
+public void XTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "X";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 10)
+}
+[TestClass]
+public void VTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "V";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 5)
+}
+[TestClass]
+public void ITest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "I";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 1)
+}
+[TestClass]
+public void IVTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "IV";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 4)
+}
+[TestClass]
+public void XLTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "XL";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 40)
+}
+[TestClass]
+public void CDTest()
+{
+  //Arrange
+  RomanToArabicController controller = new RomanToArabicController();
+  string numeral = "CD";
+  
+  //Act
+  var result = controller.ToArabic(numeral);
+  
+  //Assert
+  Assert.IsTrue(result, 400)
+}
